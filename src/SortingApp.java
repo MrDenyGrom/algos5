@@ -33,8 +33,7 @@ public class SortingApp {
             System.out.println("3. Поиск элемента по значению");
             System.out.println("4. Добавить элемент");
             System.out.println("5. Удалить элемент");
-            System.out.println("6. Подсчет количества повторяющихся чисел");
-            System.out.println("7. Генерация и сортировка массивов (сравнения, перестановки, время)");
+            System.out.println("6. Генерация и сортировка массивов (сравнения, перестановки, время)");
             System.out.println("0. Выход");
 
             int choice = scanner.nextInt();
@@ -55,9 +54,6 @@ public class SortingApp {
                     removeElement();
                     break;
                 case 6:
-                    countDuplicates();
-                    break;
-                case 7:
                     generateAndSortArrays();
                     break;
                 case 0:
@@ -104,11 +100,6 @@ public class SortingApp {
         int index = scanner.nextInt();
         array = ArrayModification.removeElement(array, index);
         System.out.println("Массив после удаления: " + Arrays.toString(array));
-    }
-
-    private static void countDuplicates() {
-        int duplicates = DuplicateCounter.countDuplicates(array);
-        System.out.println("Количество повторяющихся чисел: " + duplicates);
     }
 
     private static void generateAndSortArrays() {
